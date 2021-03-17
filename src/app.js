@@ -2,6 +2,7 @@ const path = require('path');
 const request = require('request');
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 const geocode = require('./utility/geocode');
 const forecast = require('./utility/forecast');
 const hbs = require('hbs');
@@ -24,7 +25,7 @@ app.get('/', (req, res)=>{
 app.get('/about', (req, res)=>{
     res.render('about', {
         'title': 'Weather App',
-        'name': 'about',
+        'name': 'About',
         'developer': 'kunal'
     })
 })
@@ -32,7 +33,7 @@ app.get('/about', (req, res)=>{
 app.get('/help', (req, res) =>{
     res.render('help', {
         'title': 'Weather App',
-        'name': 'help',
+        'name': 'Help',
         'developer': 'kunal'
     })
 })
@@ -95,6 +96,6 @@ app.get('*', (req,res)=>{
 });
 
 
-app.listen(3000, ()=>{
-    console.log('server has started');
+app.listen(port, ()=>{
+    console.log('server has started on '+ port);
 })

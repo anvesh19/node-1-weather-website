@@ -6,30 +6,27 @@ body{
     padding: 0px 16px;
     display: flex;
     flex-direction: column;
-    color: black
+    color: black;
+    min-height: 100vh;
+    /* margin-top: 30px; */
 }
 
-/* h2{
-    color: grey;
-} */
+h1{
+    font-size: 50px;
+}
 
 .header a{
     color: #888888;
     text-decoration: none;
     /* border: 5px solid red; */
+    padding: 0px 4px;
 }
 
 img{
     width: 250px;
-    height: 200px;
+    /* height: 200px; */
 }
 
-#footer{
-    position: absolute;
-    bottom: 10px;
-    /* border: 5px solid red; */
-    left: 40%
-}
 
 #check{
     color: red;
@@ -37,7 +34,9 @@ img{
 
 .main-content{
     /* border: 0.5px solid black; */
-    padding: 16px 0;
+    padding-top: 16px;
+    flex-grow: 1;
+    margin-top: 16px;
 }
 
 input{
@@ -51,4 +50,10 @@ button{
     padding: 8px;
     cursor: pointer;
     border: 1px solid;
+}
+
+#footer{
+    border-top: 0.5px solid #888888;
+    padding-top: 16px;
+    color: #888888;
 }
