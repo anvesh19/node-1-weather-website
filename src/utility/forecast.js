@@ -15,7 +15,8 @@ const forecast = (latitude, longitude, callback) =>{
                 'currentTemperature' : body.current.temperature,
                 'feelsLikeTemperature': body.current.feelslike,
                 'place' : body.location.name + ' ' + body.location.region + ',' + body.location.country,
-                'precipitation': body.current.precip
+                'precipitation': body.current.precip,
+                'humidity' : body.current.humidity
             })
         }
     })

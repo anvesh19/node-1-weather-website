@@ -25,9 +25,9 @@ weatherForm.addEventListener('submit', (e)=>{
             para1.innerHTML= data.error
             return
         }
-        console.log(data)
+        // console.log(data)
         para1.textContent = data.place;
-        para2.textContent = 'The current temprature is '+data.temperature+' but it appears to be '+data.feelsLike+' and there is '+data.precipitation +'% chance of rain.'
+        para2.textContent = 'The current temprature is '+data.temperature+' but it appears to be '+data.feelsLike+' with humidity ' + data.humidity+ ' and there is '+data.precipitation +'% chance of rain.'
     })
 });
 });

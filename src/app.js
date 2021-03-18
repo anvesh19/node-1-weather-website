@@ -60,7 +60,8 @@ app.get('/weather', (req,res)=>{
                 'place' : data.place,
                 'temperature': data.currentTemperature,
                 'feelsLike': data.feelsLikeTemperature,
-                'precipitation': data.precipitation
+                'precipitation': data.precipitation,
+                'humidity': data.humidity
             })
         })
     })
